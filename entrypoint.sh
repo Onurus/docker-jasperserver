@@ -51,5 +51,7 @@ if [ -f "/.do_deploy_jasperserver" ]; then
     popd
 fi
 
+printf '\nsecurity.validation.sql.on=false' >> /usr/local/tomcat/webapps/ROOT/WEB-INF/classes/esapi/security-config.properties
+
 # run Tomcat to start JasperServer webapp
 catalina.sh run
